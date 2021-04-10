@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>Whatsapp Number for Admin View Order</name>
+    <version>1.0</version>
+    <author>Ching Lun Guang</author>
+    <link>mailto:lunguangching519@gmail.com</link>
+    <code>whatsapp_admin_view_order</code>
+
+    <file path="admin/view/template/sale/order_info.twig">
+        <operation>
+            <search><![CDATA[
+            <td>{{ telephone }}</td>
+            ]]></search>
+            <add position="replace"><![CDATA[
+            <td><a href="https://wa.me/6{{ telephone }}" target="_blank">{{ telephone }}</a></td>
+            ]]></add>
+        </operation>
+    </file>
+</modification>
